@@ -9,7 +9,10 @@ const Hero = () => {
           <h1 className="text-[40px] sm:text-[50px] xl:text-[70px] xl:leading-[80px] font-bold font-bungee mb-8">
             Order your favorite local meals
           </h1>
-          <p className="text-xl lg:text-[24px] lg:leading-[36px] max-w-[550px] mx-auto lg:mx-0">Take advantage of local food prepared by chefs who understand your taste buds.</p>
+          <p className="text-xl lg:text-[24px] lg:leading-[36px] max-w-[550px] mx-auto lg:mx-0">
+            Take advantage of local food prepared by chefs who understand your
+            taste buds.
+          </p>
         </div>
         <div className="flex justify-center items-center">
           <Image
@@ -17,6 +20,7 @@ const Hero = () => {
             alt="hero image"
             width={700}
             height={0}
+            priority={true}
             className="rounded-full"
           />
         </div>
