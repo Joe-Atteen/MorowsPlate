@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Bungee_Inline } from "next/font/google";
@@ -13,6 +12,8 @@ import "./globals.css";
 const bungee = Bungee_Inline({
   weight: "400",
   display: "swap",
+  variable: "--font-bungee",
+  subsets: ["latin"],
 });
 
 const gellixThin = localFont({
