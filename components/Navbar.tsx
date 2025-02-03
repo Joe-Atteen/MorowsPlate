@@ -27,6 +27,7 @@ const Navbar = () => {
           alt="hamburger"
           width={30}
           height={30}
+          priority={true}
           className="invert-colors block xl:hidden"
         />
         <div className="absolute left-[50%] transfrom -translate-x-[50%]">
