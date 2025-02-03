@@ -65,6 +65,7 @@ const config: Config = {
         gellixExtraBold: ["var(--font-gellix-extraBold)", "sans-serif"],
         gellixItalic: ["var(--font-gellix-italic)", "sans-serif"],
         generalSans: ["var(--font-generalSans)", "sans-serif"],
+        bungee: ["Bungee Inline", "sans-serif"],
       },
     },
   },

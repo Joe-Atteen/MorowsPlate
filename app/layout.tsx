@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Bungee_Inline } from "next/font/google";
 import "./globals.css";
 
 // const generalSans = localFont({
@@ -7,6 +9,11 @@ import "./globals.css";
 //   variable: "--font-generalSans",
 //   weight: "100 200 300 400 500 600 700 800 900",
 // });
+
+const bungee = Bungee_Inline({
+  weight: "400",
+  display: "swap",
+});
 
 const gellixThin = localFont({
   src: "./fonts/Gellix-Thin.ttf",
@@ -61,7 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${gellixThin.variable} ${gellixLight.variable} ${gellixRegular.variable} ${gellixMedium.variable} ${gellixSemiBold.variable} ${gellixBold.variable} ${gellixExtraBold.variable} ${gellixItalic.variable} antialiased`}
+        className={`${bungee} ${gellixThin.variable} ${gellixLight.variable} ${gellixRegular.variable} ${gellixMedium.variable} ${gellixSemiBold.variable} ${gellixBold.variable} ${gellixExtraBold.variable} ${gellixItalic.variable} antialiased`}
       >
         {children}
       </body>
