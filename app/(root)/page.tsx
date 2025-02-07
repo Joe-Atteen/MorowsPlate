@@ -244,7 +244,7 @@ export default function Home() {
       </div>
       {visibleItems < foodItems.length && (
         <div className="flex justify-center mb-20">
-          <div ref={loadMoreRef} className="lg:hidden"></div>
+          <div ref={loadMoreRef} className="lg:hidden">Loading...</div>
           <button
             onClick={loadMoreItems}
             className="btn-secondary hidden lg:flex"

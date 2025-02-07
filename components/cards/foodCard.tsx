@@ -33,7 +33,7 @@ const FoodCard = ({
           />
         </Link>
       </div>
-      <div className="flex flex-wrap sm:justify-between items-center mb-2">
+      <div className="flex flex-wrap justify-between items-center mb-2">
         <Link href="#" className="text-[#717171]">{chefName}</Link>
         <Rating
           iconsCount={5}
