@@ -2,6 +2,8 @@
 import FoodCard from "../../components/cards/foodCard";
 import Hero from "@/components/Hero";
 import { useEffect, useRef, useState } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CookingPot, HandPlatter, Soup } from "lucide-react";
 
 const foodItems = [
   {
@@ -230,21 +232,69 @@ export default function Home() {
   return (
     <div className="">
       <Hero />
-      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-7 xl:gap-10 px-3 sm:px-12 xl:px-12 mb-10">
-        {foodItems.slice(0, visibleItems).map((item, index) => (
-          <FoodCard
-            key={index}
-            image={item.image}
-            chefName={item.chefName}
-            foodName={item.foodName}
-            description={item.description}
-            price={item.price}
-          />
-        ))}
+      <div className="max-w-[1400px] mx-auto px-3 sm:px-12 xl:px-12 mb-20">
+        <h2 className="uppercase font-gellixBold text-2xl md:text-4xl text-center mb-5">
+          Something for every indigenous food lover
+        </h2>
+        <Tabs defaultValue="soup">
+          <TabsList className="flex justify-start md:justify-center gap-1 overflow-x-auto overflow-y-hidden py-16 mb-5">
+            <TabsTrigger
+              value="soup"
+              className="data-[state=active]:bg-[#f8d5cf] data-[state=active]:text-[#244848] bg-[#f2f2f2] px-16 flex flex-col items-center"
+            >
+              <Soup size={45} />
+              <span>Soup</span>
+            </TabsTrigger>
+            <TabsTrigger
+              value="stew"
+              className="data-[state=active]:bg-[#f8d5cf] data-[state=active]:text-[#244848] bg-[#f2f2f2] px-16 flex flex-col items-center"
+            >
+              <CookingPot size={45} />
+              <span>Stew</span>
+            </TabsTrigger>
+            <TabsTrigger
+              value="rice"
+              className="data-[state=active]:bg-[#f8d5cf] data-[state=active]:text-[#244848] bg-[#f2f2f2] px-16 flex flex-col items-center"
+            >
+              <HandPlatter size={45} />
+              <span>Rice</span>
+            </TabsTrigger>
+          </TabsList>
+          <TabsContent value="soup">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-7 xl:gap-10">
+              {foodItems.slice(0, visibleItems).map((item, index) => (
+                <FoodCard
+                  key={index}
+                  image={item.image}
+                  chefName={item.chefName}
+                  foodName={item.foodName}
+                  description={item.description}
+                  price={item.price}
+                />
+              ))}
+            </div>
+          </TabsContent>
+          <TabsContent value="stew">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-7 xl:gap-10">
+              {foodItems.slice(0, visibleItems).map((item, index) => (
+                <FoodCard
+                  key={index}
+                  image={item.image}
+                  chefName={item.chefName}
+                  foodName={item.foodName}
+                  description={item.description}
+                  price={item.price}
+                />
+              ))}
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
       {visibleItems < foodItems.length && (
         <div className="flex justify-center mb-20">
-          <div ref={loadMoreRef} className="lg:hidden">Loading...</div>
+          <div ref={loadMoreRef} className="lg:hidden">
+            Loading...
+          </div>
           <button
             onClick={loadMoreItems}
             className="btn-secondary hidden lg:flex"

@@ -15,10 +15,10 @@ const Navbar = () => {
           <Link href="/" className="navlink">
             All Meals
           </Link>
-          <Link href="/" className="navlink">
+          <Link href="/ghanaian-meals" className="navlink">
             Ghanaian
           </Link>
-          <Link href="/" className="navlink">
+          <Link href="/nigerian-meals" className="navlink">
             Nigerian
           </Link>
         </div>
