@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="bg-[#244848] w-full h-full px-6 sm:px-12 pt-[170px] sm:pt-[220px] pb-[130px]">
+    <div className="bg-[#244848] w-full h-full px-6 sm:px-12 pt-[170px] sm:pt-[220px] pb-[130px] mb-10 md:mb-20">
       <div className="max-w-[1400px] mx-auto h-full grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-10 items-center">
         <div className="text-white text-center lg:text-left">
           <h1 className="text-[40px] sm:text-[50px] xl:text-[70px] xl:leading-[80px] font-bold font-bungee mb-8">

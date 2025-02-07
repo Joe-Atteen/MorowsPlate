@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Bungee_Inline } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 // const generalSans = localFont({
 //   src: "./fonts/GeneralSans-Variable.ttf",
@@ -71,6 +72,7 @@ export default function RootLayout({
       <body
         className={`${bungee} ${gellixThin.variable} ${gellixLight.variable} ${gellixRegular.variable} ${gellixMedium.variable} ${gellixSemiBold.variable} ${gellixBold.variable} ${gellixExtraBold.variable} ${gellixItalic.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

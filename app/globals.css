@@ -267,15 +267,15 @@ body {
   }
 
   .card-wrapper {
-    @apply bg-light-900 dark:dark-gradient shadow-light-100 dark:shadow-dark-100;
+    @apply bg-light-900 shadow-light-100 border border-light-800 rounded-2xl p-3;
   }
 
-  .btn {
-    @apply bg-light-800 dark:bg-dark-300 !important;
+  .btn-primary {
+    @apply bg-[#244848] text-white p-3 rounded-lg capitalize hover:bg-[#386e6e] !important;
   }
 
   .btn-secondary {
-    @apply bg-light-800 dark:bg-dark-400 !important;
+    @apply bg-white text-[#244848] p-3 border border-[#244848] rounded-lg capitalize hover:bg-[#244848] hover:text-white !important;
   }
 
   .btn-tertiary {
@@ -417,3 +417,5 @@ code {
     --radius: 0.5rem;
   }
 }
+
+svg.star-svg { display: inline; }
