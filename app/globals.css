@@ -9,6 +9,11 @@ body {
   font-family: "gellixRegular", sans-serif;
 }
 
+.navlink {
+  color: #E85940;
+  text-decoration: underline;
+}
+
 .navlink:hover {
   color: #E85940;
   text-decoration: underline;

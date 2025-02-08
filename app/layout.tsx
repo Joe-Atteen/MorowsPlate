@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Bungee_Inline } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/nav/Navbar";
 
 // const generalSans = localFont({
 //   src: "./fonts/GeneralSans-Variable.ttf",
