@@ -58,7 +58,7 @@ const FoodCard = ({
 
       <div className="flex justify-between items-center gap-3 md:hidden">
         <div className="rounded-2xl overflow-hidden w-[20%]">
-          <Link href="#">
+          <Link href="/food-details/1">
             <Image
               src={image}
               alt="food"

@@ -3,6 +3,16 @@ import FoodCard from "./cards/foodCard";
 import { useEffect, useRef, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CookingPot, HandPlatter, Soup } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 
 const foodItems = [
   {
@@ -232,7 +242,7 @@ export default function HomeContent() {
   return (
     <>
       <Tabs defaultValue="soup">
-        <TabsList className="flex justify-start md:justify-center gap-1 overflow-x-auto overflow-y-hidden py-16 mb-5">
+        <TabsList className="flex justify-start md:justify-center gap-1 overflow-x-auto overflow-y-hidden py-16">
           <TabsTrigger
             value="soup"
             className="data-[state=active]:bg-[#f8d5cf] data-[state=active]:text-[#244848] bg-[#f2f2f2] px-16 flex flex-col items-center"
@@ -255,6 +265,29 @@ export default function HomeContent() {
             <span>Rice</span>
           </TabsTrigger>
         </TabsList>
+
+        <div className="mb-5">
+          <Select>
+            <SelectTrigger className="w-full sm:w-[200px]">
+              <SelectValue placeholder="FIlter by country" />
+            </SelectTrigger>
+            <SelectContent className="bg-white">
+              <SelectGroup>
+                <SelectLabel>Countries</SelectLabel>
+                <SelectItem value="light" className="hover:bg-[#f2f2f2]">
+                  Ghana
+                </SelectItem>
+                <SelectItem value="dark" className="hover:bg-[#f2f2f2]">
+                  Nigeria
+                </SelectItem>
+                <SelectItem value="system" className="hover:bg-[#f2f2f2]">
+                  China
+                </SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </div>
+
         <TabsContent value="soup">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-7 xl:gap-10">
             {foodItems.slice(0, visibleItems).map((item, index) => (
