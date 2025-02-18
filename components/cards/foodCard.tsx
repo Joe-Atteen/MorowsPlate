@@ -24,7 +24,7 @@ const FoodCard = ({
     <>
       <div className="card-wrapper hidden md:block">
         <div className="rounded-2xl overflow-hidden mb-5">
-          <Link href="#">
+          <Link href="/food-details/1">
             <Image
               src={image}
               alt="food"

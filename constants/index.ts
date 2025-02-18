@@ -4,11 +4,11 @@ export const sidebarLinks = [
     label: "All Meals",
   },
   {
-    route: "/ghanaian-meals",
-    label: "Ghanaian",
+    route: "/wishlist",
+    label: "Wishlist",
   },
   {
-    route: "/nigerian-meals",
-    label: "Nigerian",
+    route: "/buy-again",
+    label: "Buy Again",
   },
 ];
